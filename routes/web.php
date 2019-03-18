@@ -23,4 +23,12 @@ Route::group(['middleware'=>'auth'], function() {
 	Route::get('/category/create', 'CategoryController@create');
 	Route::post('/category/create', 'CategoryController@createProcess')->name('create');
 	Route::get('/category/view/{id}', 'CategoryController@view');
+
+	// Dropzone routes
+
+
+	// News Route
+	Route::get('/news', 'NewsController@index')->name('news.index');
+	Route::get('news/create', 'NewsController@create');
+	Route::post('news/create', 'NewsController@createProcess')->name('news.create');
 });

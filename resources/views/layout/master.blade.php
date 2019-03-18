@@ -34,6 +34,8 @@
 
     <section id="container">
       
+      @include('partials.flash_messages')
+
       @if (Auth::check())
         @include('partials.nav')
         @include('partials.aside')

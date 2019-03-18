@@ -50,6 +50,10 @@
                     <i class="fa fa-cogs"></i>
                     <span>News</span>
                 </a>
+                <ul class="sub">
+                    <li><a  href="/news">show all news</a></li>
+                    <li><a  href="/news/create">add news</a></li>
+                </ul>
             </li>
 
             <li class="sub-menu">
