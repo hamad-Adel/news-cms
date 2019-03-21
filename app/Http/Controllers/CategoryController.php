@@ -23,16 +23,36 @@ class CategoryController extends Controller
 
     public function createProcess(CategoryCreateRequest $request) 
     {
-    	Category::create([
-    		'name' => $request->get('name'),
-    		'user_id' => Auth::user()->id
-    	]);
+        $request['user_id'] = Auth::user()->id;
+    	Category::create($request->all());
 		return redirect()->back()->with('success', 'Category '. $request->get('name'). ' saved');
     }
 
     public function view(Request $request)
     {
-    	return view('category.view')
-    			->with('category',  Category::where('id', $request->id)->get()[0]);
+        $category = Category::where('id', $request->id)->firstOrFail();
+        return view('category.view')->withCategory($category);
+    }
+
+    public function edit(Request $request)
+    {
+        $category = Category::where('id', $request->id)->firstOrFail();
+        return view('category.edit')->withCategory($category);
+    }
+
+    public function editProcess(CategoryCreateRequest $request)
+    {
+        $category = Category::findOrFail($request->id);
+        $category->name = $request->name;
+        $category->save();
+        return redirect()->back()->with('success', 'Category Updated Successfully'); 
+    }
+
+    public function delete(Request $request)
+    {
+        $category = Category::findOrFail($request->id);
+        $category->delete();
+        return redirect()->back()->with('success', 'Category Deleted'); 
+ 
     }
 }

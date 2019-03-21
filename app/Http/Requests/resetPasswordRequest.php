@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class NewsCreateRequest extends FormRequest
+class resetPasswordRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,12 +24,8 @@ class NewsCreateRequest extends FormRequest
     public function rules()
     {
         return [
-          
-            'title'     => 'required|min:5|max:255',
-            'main_photo'=> 'required|image|mimes:jpg,png,jpeg',
-            'photos.*'    => 'image|mimes:jpg,png,jpeg',
-            'category'  => 'required',
-            'content'   => 'required'
+            'email'=>'required|email|min:10|max:100',
+            'password'=>'required|min:6|confirmed',
         ];
     }
 }

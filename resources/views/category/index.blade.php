@@ -18,10 +18,11 @@
 							<i class="fa fa-pencil"></i>
 							Edit
 						</a>
-						<a class="btn btn-theme04" href="category/delete/{{$category->id}}">	
-							<i class="fa fa-trash"></i>
-							Delete
-						</a>
+			<form onclick="return confirm('Are you sure to delete?')" style="display: inline-block;" action="{{route('category.delete', ['id'=>$category->id])}}" method='post'>
+				{{csrf_field()}}			
+				<button type="submit" class="btn btn-theme04"		<i class="fa fa-eye"></i> Delete
+						</button>	
+			</form>
 						<a class="btn btn-theme03" href="category/view/{{$category->id}}">		<i class="fa fa-eye"></i>	
 							View
 						</a>

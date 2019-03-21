@@ -17,18 +17,6 @@
 
             <li class="sub-menu">
                 <a href="javascript:;" >
-                    <i class="fa fa-desktop"></i>
-                    <span>UI Elements</span>
-                </a>
-                <ul class="sub">
-                    <li><a  href="general.html">General</a></li>
-                    <li><a  href="buttons.html">Buttons</a></li>
-                    <li><a  href="panels.html">Panels</a></li>
-                </ul>
-            </li>
-
-            <li class="sub-menu">
-                <a href="javascript:;" >
                     <i class="fa fa-cogs"></i>
                     <span>Settings</span>
                 </a>
@@ -57,40 +45,10 @@
             </li>
 
             <li class="sub-menu">
-                <a href="javascript:;" >
+                <a href='/logout' >
                     <i class="fa fa-cogs"></i>
                     <span>Logout</span>
                 </a>
-            </li>
-
-            <li class="sub-menu">
-                <a href="javascript:;" >
-                    <i class="fa fa-tasks"></i>
-                    <span>Forms</span>
-                </a>
-                <ul class="sub">
-                    <li><a  href="form_component.html">Form Components</a></li>
-                </ul>
-            </li>
-            <li class="sub-menu">
-                <a href="javascript:;" >
-                    <i class="fa fa-th"></i>
-                    <span>Data Tables</span>
-                </a>
-                <ul class="sub">
-                    <li><a  href="basic_table.html">Basic Table</a></li>
-                    <li><a  href="responsive_table.html">Responsive Table</a></li>
-                </ul>
-            </li>
-            <li class="sub-menu">
-                <a href="javascript:;" >
-                    <i class=" fa fa-bar-chart-o"></i>
-                    <span>Charts</span>
-                </a>
-                <ul class="sub">
-                    <li><a  href="morris.html">Morris</a></li>
-                    <li><a  href="chartjs.html">Chartjs</a></li>
-                </ul>
             </li>
 
         </ul>

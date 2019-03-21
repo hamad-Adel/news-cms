@@ -33,8 +33,6 @@
   <body>
 
     <section id="container">
-      
-      @include('partials.flash_messages')
 
       @if (Auth::check())
         @include('partials.nav')
@@ -43,7 +41,7 @@
 
          <section id="main-content">
           <section class="wrapper">
-            
+            @include('partials.flash_messages')
             @yield('content')
 
           </section>
